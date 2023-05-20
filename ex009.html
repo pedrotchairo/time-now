@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        #flutua {
+            background-color: #ffffff;
+            height: 220px;
+            width: 350px;
+            position: relative;
+            top: 100px;
+            border-radius: 20px;
+            margin: auto;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            display: block;
+            bottom: 60px;
+            margin: 0px;
+            font-size: 20pt;
+        }
+        h3 {
+            color: #ffffff;
+            font-size: 12pt;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .horas {
+            font-size: 14pt;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            line-height: -20px;
+            bottom: 10px;
+            margin: 0px;
+            position: relative;
+        }
+        .foto img {
+            height: 150px;
+            width: 150px;
+            position: relative;
+            left: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="flutua">
+        <h1>Hora do dia</h1>
+        <div class="horas"></div>
+        <div class="foto"><img src="/mudaHorario/manha.jpg" id="img"></div>
+        <h3>@pedrotchairo</h3>
+    </div>
+    <script>
+            var agora = new Date ()
+            var hora = agora.getHours()
+            var hr = document.querySelector('div.horas')
+            var ft = document.getElementById('img')
+            if (hora >= 5 && hora <= 12 ) {
+                hr.innerText=(`Agora são ${hora} horas.`)
+                img.src = '/mudaHorario/manha.jpg'
+                document.body.style.background = '#e2cd9f' 
+            } else if (hora >= 13 && hora <= 18) {
+                hr.innerText=(`Agora são ${hora} horas.`)
+                img.src = '/mudaHorario/tarde.jpg'
+                document.body.style.background = '#b9846f' 
+            } else {
+                hr.innerText=(`Agora são ${hora} horas.`)
+                img.src = '/mudaHorario/noite.jpg'
+                document.body.style.background = '#515154' 
+            }
+    </script>
+</body>
+</html>
